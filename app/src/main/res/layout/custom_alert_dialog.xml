@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:background="@color/lowBlue"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/item_hour_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="ביטול תור"
+        android:textSize="18sp"
+        android:textColor="#ffffff"
+        android:textStyle="bold|italic"
+        android:shadowRadius="10"
+        android:shadowDx="10"
+        android:shadowDy="2"
+        android:shadowColor="#000000"
+        android:paddingTop="5dp"
+        android:textAlignment="center"
+        android:layout_gravity="center"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="האם אתה בטוח שאתה רוצה לבטל את התור?"
+        android:gravity="center"
+        android:textColor="#ffffff"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:shadowRadius="10"
+        android:shadowDx="10"
+        android:shadowDy="2"
+        android:shadowColor="#000000"/>
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_no"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_gravity="end"
+            android:background="@color/middleBlue"
+            android:textColor="#ffffff"
+            android:text="כן"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_yes"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:background="@color/middleBlue"
+            android:text="לא"
+            android:layout_marginStart="15dp"
+            android:textStyle="bold"
+            android:textColor="#ffffff" />
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

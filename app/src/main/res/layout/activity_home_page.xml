@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/custom_background_color"
+    tools:context=".Activities.HomePageActivity"
+    android:id="@+id/relative_layout_home_page">
+
+
+    <ScrollView
+        android:id="@+id/home_page_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/video_frame"
+                android:layout_width="match_parent"
+                android:layout_height="285dp">
+
+
+                <VideoView
+                    android:id="@+id/relife_video_home_page"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true" />
+
+            </RelativeLayout>
+
+
+            <Button
+                android:id="@+id/move_to_queue_order_turns"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/phone_number_edit_text"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/custom_btn"
+                android:onClick="orderTurn"
+                android:text="הזמן תור"
+                android:textColor="#ffffff"
+                android:textSize="20sp" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="80dp"
+                android:background="@drawable/custom_text_view"
+                android:shadowColor="#000000"
+                android:shadowDx="10"
+                android:shadowDy="2"
+                android:shadowRadius="10"
+                android:text="הידרותרפיה"
+                android:textAlignment="center"
+                android:textColor="#ffffff"
+                android:textSize="35sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:text="@string/text_of_hydroterapia"
+                android:textColor="#ffffff"
+                android:textSize="16sp"
+                android:textAlignment="center"/>
+
+            <Button
+                android:id="@+id/order_queue_by_hydro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/custom_btn"
+                android:onClick="orderHydroTurn"
+                android:text="הזמן תור בשיטת הידרותרפיה"
+                android:textColor="#ffffff"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/picture1" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="80dp"
+                android:background="@drawable/custom_text_view"
+                android:shadowColor="#000000"
+                android:shadowDx="10"
+                android:shadowDy="2"
+                android:shadowRadius="10"
+                android:text="וואטסו"
+                android:textAlignment="center"
+                android:textColor="#ffffff"
+                android:textSize="35sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:text="@string/text_of_watsu"
+                android:textColor="#ffffff"
+                android:textSize="16sp"
+                android:textAlignment="center"/>
+
+            <Button
+                android:id="@+id/order_queue_by_watsu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/custom_btn"
+                android:onClick="orderWatsuTurn"
+                android:text="הזמן תור בשיטת וואטסו"
+                android:textColor="#ffffff"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/picture2" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:gravity="center"
+                android:shadowColor="#000000"
+                android:shadowDx="10"
+                android:shadowDy="2"
+                android:shadowRadius="10"
+                android:text="מוזמנים לעקוב אחרינו"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                android:textStyle="bold|italic" />
+
+
+            <RelativeLayout
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp">
+
+                <ImageView
+                    android:id="@+id/facebook_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:src="@drawable/facebook" />
+
+                <ImageView
+                    android:id="@+id/instagram_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="20dp"
+                    android:layout_toEndOf="@id/facebook_icon"
+                    android:src="@drawable/instagram_new" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="left"
+        android:layout_alignParentBottom="true">
+
+        <ImageView
+            android:id="@+id/image_arrow_up"
+            android:layout_width="35dp"
+            android:layout_height="50dp"
+            android:src="@drawable/arrow_up"
+            android:layout_marginBottom="15dp"
+            android:layout_marginStart="15dp"
+            android:visibility="invisible"
+            android:alpha="1"
+            android:clickable="true"/>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

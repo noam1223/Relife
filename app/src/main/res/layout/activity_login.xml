@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.LoginActivity"
+    android:orientation="vertical"
+    android:background="@drawable/custom_background_color">
+
+
+    <EditText
+        android:id="@+id/phone_number_edit_text"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:hint="הכנס מספר טלפון"
+        android:gravity="center"
+        android:inputType="phone"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/custom_edit_text"/>
+
+    <Button
+        android:id="@+id/phone_number_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="אישור"
+        android:layout_below="@+id/phone_number_edit_text"
+        android:layout_marginTop="40dp"
+        android:onClick="checkPhoneNumber"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:background="@drawable/custom_btn"/>
+
+
+</RelativeLayout>

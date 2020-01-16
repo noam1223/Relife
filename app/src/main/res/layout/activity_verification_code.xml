@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.VerificationCodeActivity"
+    android:background="@drawable/custom_background_color">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/custom_text_view"
+        android:shadowColor="#000000"
+        android:shadowDx="10"
+        android:shadowDy="2"
+        android:shadowRadius="10"
+        android:text="אימות הטלפון"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textSize="35sp"
+        android:textStyle="normal"/>
+
+
+    <EditText
+        android:id="@+id/verification_code_edit_text"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:hint="הכנס קוד אימות"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:inputType="phone"
+        android:background="@drawable/custom_edit_text" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/verification_code_edit_text"
+        android:layout_marginTop="24dp"
+        android:text="אישור"
+        android:layout_marginStart="32dp"
+        android:onClick="verifyCode"
+        android:textSize="20sp"
+        android:textColor="#ffffff"
+        android:background="@drawable/custom_btn"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/verification_code_edit_text"
+        android:layout_marginTop="24dp"
+        android:text="שלח קוד אימות מחדש"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="32dp"
+        android:onClick="sendVerificationCodeBtn"
+        android:textSize="20sp"
+        android:textColor="#ffffff"
+        android:background="@drawable/custom_btn"/>
+
+</RelativeLayout>
