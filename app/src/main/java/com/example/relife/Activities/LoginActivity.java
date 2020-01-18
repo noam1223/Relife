@@ -40,7 +40,6 @@ public class LoginActivity extends AppCompatActivity {
     Button phoneNumberBtn;
     FirebaseAuth mAuth;
     FirebaseHelper firebaseHelper;
-    DatabaseReference db;
     String verificationID;
 
     @Override
@@ -53,7 +52,6 @@ public class LoginActivity extends AppCompatActivity {
             actionBar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#0f4c75")));
         }
 
-        db = FirebaseDatabase.getInstance().getReference();
         mAuth = FirebaseAuth.getInstance();
         phoneNumberEditText = (EditText) findViewById(R.id.phone_number_edit_text);
         phoneNumberBtn = (Button) findViewById(R.id.phone_number_btn);
@@ -84,7 +82,6 @@ public class LoginActivity extends AppCompatActivity {
         @Override
         public void onVerificationFailed(@NonNull FirebaseException e) {
 
-            Log.i("VerificationFailed", e.getMessage() + " + " + e.toString());
 
         }
 
@@ -130,13 +127,12 @@ public class LoginActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
 
-                            Log.i("Hello", "clicked");
                             Intent intent = new Intent(getApplicationContext(), HomePageActivity.class);
                             startActivity(intent);
+                            finish();
 
                         } else {
                             if (task.getException() instanceof FirebaseAuthInvalidCredentialsException) {
-
 
 
                             }

@@ -44,6 +44,7 @@ public class SignUpActivity extends AppCompatActivity {
             Intent intent = new Intent(this, VerificationCodeActivity.class);
             intent.putExtra("user", user.getUser());
             startActivity(intent);
+            finish();
 
         }
 

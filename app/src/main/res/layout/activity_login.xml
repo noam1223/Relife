@@ -9,6 +9,22 @@
     android:orientation="vertical"
     android:background="@drawable/custom_background_color">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/custom_text_view"
+        android:shadowColor="#000000"
+        android:shadowDx="10"
+        android:shadowDy="2"
+        android:shadowRadius="10"
+        android:text="כניסה"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textSize="35sp"
+        android:textStyle="normal"/>
+
+
 
     <EditText
         android:id="@+id/phone_number_edit_text"

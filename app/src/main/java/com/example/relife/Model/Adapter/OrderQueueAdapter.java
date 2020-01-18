@@ -122,6 +122,8 @@ public class OrderQueueAdapter extends RecyclerView.Adapter<OrderQueueAdapter.Vi
         return new ViewHolderOrderQueue(view);
     }
 
+
+
     @Override
     public void onBindViewHolder(@NonNull final ViewHolderOrderQueue holder, final int position) {
 
@@ -157,6 +159,8 @@ public class OrderQueueAdapter extends RecyclerView.Adapter<OrderQueueAdapter.Vi
         });
 
     }
+
+
 
     @Override
     public int getItemCount() {

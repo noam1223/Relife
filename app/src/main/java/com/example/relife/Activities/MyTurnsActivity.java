@@ -30,7 +30,6 @@ public class MyTurnsActivity extends AppCompatActivity implements MyTurnsCallbac
     FirebaseHelper firebaseHelper;
     FirebaseAuth firebaseAuth;
     Intent intent;
-    ArrayList<TurnsClass> turnsClasses = new ArrayList<>();
     Calendar calendar;
     MyTurnAdapter turnAdapter;
 
@@ -62,7 +61,6 @@ public class MyTurnsActivity extends AppCompatActivity implements MyTurnsCallbac
     public void myTurnsWeekCallback(ArrayList<TurnsClass> turnsClasses) {
 
         if (turnsClasses != null) {
-            this.turnsClasses = turnsClasses;
 
             RecyclerView recyclerView = (RecyclerView) findViewById(R.id.my_turn_recycler_view);
             turnAdapter = new MyTurnAdapter(this, turnsClasses, this, firebaseHelper);

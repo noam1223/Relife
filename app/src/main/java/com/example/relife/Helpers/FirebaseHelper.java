@@ -78,7 +78,6 @@ public class FirebaseHelper {
                 }
             } catch (DatabaseException e) {
                 e.printStackTrace();
-                ;
                 saved = false;
             }
 
@@ -137,8 +136,7 @@ public class FirebaseHelper {
     public void retrieveTurnsOfToday(final OrderQueue orderQueue, final DayTurnCallback callback, final ArrayList<TurnsClass> turnsClasses) {
 
         if (auth.getCurrentUser() != null) {
-
-            final HashMap<String, TurnsClass> turnsClassHashMap = new HashMap<>();
+            
             db.child("Turn").child(becomeToString(orderQueue.getYear())).child(becomeToString(orderQueue.getMonth())).
                     child(becomeToString(orderQueue.getWeek())).child(becomeToString(orderQueue.getDay()))
                     .addListenerForSingleValueEvent(new ValueEventListener() {
@@ -179,45 +177,6 @@ public class FirebaseHelper {
         final ArrayList<TurnsClass> turnsClasses = new ArrayList<>();
 
         if (auth.getCurrentUser() != null) {
-//
-//            db.child("Turn").child(becomeToString(orderQueue.getYear())).child(becomeToString(orderQueue.getMonth())).child(becomeToString(orderQueue.getWeek()))
-//                    .addValueEventListener(new ValueEventListener() {
-//                        @Override
-//                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-//
-//
-//                            for (DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()) {
-//
-//
-//                                for (DataSnapshot dataSnapshot2 : dataSnapshot1.getChildren()) {
-//
-//                                    if (dataSnapshot2.exists()) {
-//
-//                                        TurnsClass turnsClass = dataSnapshot2.getValue(TurnsClass.class);
-//
-//                                        if (turnsClass != null) {
-//
-//                                            if (turnsClass.getUser().getPhoneNumber().equals(user.getPhoneNumber())){
-//
-//                                                turnsClasses.add(dataSnapshot2.getValue(TurnsClass.class));
-//
-//                                            }
-//                                        }
-//                                    }
-//                                }
-//
-//                            }
-//
-//
-//                            callback.myTurnsWeekCallback(turnsClasses);
-//
-//                        }
-//
-//                        @Override
-//                        public void onCancelled(@NonNull DatabaseError databaseError) {
-//
-//                        }
-//                    });
 
 
             db.child("Turn").child(becomeToString(orderQueue.getYear())).child(becomeToString(orderQueue.getMonth())).addListenerForSingleValueEvent(new ValueEventListener() {

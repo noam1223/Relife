@@ -20,6 +20,7 @@ import android.widget.VideoView;
 
 import com.example.relife.Helpers.FirebaseHelper;
 import com.example.relife.Helpers.MyCallback;
+import com.example.relife.MainActivity;
 import com.example.relife.Model.User;
 import com.example.relife.R;
 import com.google.firebase.auth.FirebaseAuth;
@@ -159,6 +160,8 @@ public class HomePageActivity extends AppCompatActivity implements MyCallback {
 
             if (firebaseAuth.getCurrentUser() != null) {
                 firebaseAuth.signOut();
+                Intent intent = new Intent(this, MainActivity.class);
+                startActivity(intent);
                 finish();
             }
 

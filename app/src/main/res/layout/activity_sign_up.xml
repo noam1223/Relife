@@ -7,11 +7,27 @@
     tools:context=".Activities.SignUpActivity"
     android:background="@drawable/custom_background_color">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/custom_text_view"
+        android:shadowColor="#000000"
+        android:shadowDx="10"
+        android:shadowDy="2"
+        android:shadowRadius="10"
+        android:text="הרשמה"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textSize="35sp"
+        android:textStyle="normal"/>
+
+
     <EditText
         android:id="@+id/user_name_edit_text_sign_up"
         android:layout_width="300dp"
         android:layout_height="40dp"
-        android:hint=":מה שמך"
+        android:hint="שמך"
         android:gravity="center"
         android:inputType="textPersonName"
         android:layout_above="@+id/phone_number_edit_text_sign_up"
@@ -24,7 +40,7 @@
         android:id="@+id/phone_number_edit_text_sign_up"
         android:layout_width="300dp"
         android:layout_height="40dp"
-        android:hint=":מס׳ הטלפון שבבעלותך"
+        android:hint="מס׳ הטלפון שבבעלותך"
         android:gravity="center"
         android:inputType="phone"
         android:layout_centerVertical="true"

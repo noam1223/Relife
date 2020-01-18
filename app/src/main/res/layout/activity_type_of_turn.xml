@@ -7,6 +7,22 @@
     tools:context=".Activities.TypeOfTurnActivity"
     android:background="@drawable/custom_background_color">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/custom_text_view"
+        android:shadowColor="#000000"
+        android:shadowDx="10"
+        android:shadowDy="2"
+        android:shadowRadius="10"
+        android:text="בחר סוג טיפול"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textSize="35sp"
+        android:textStyle="normal"/>
+
+
     <Button
         android:id="@+id/hydro_queue"
         android:layout_width="match_parent"
