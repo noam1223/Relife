@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
             actionBar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#0f4c75")));
         }
 
+
         auth = FirebaseAuth.getInstance();
         relifeLogoImageView = findViewById(R.id.relife_logo_image_view);
         signInBtn = findViewById(R.id.sign_up_btn);
